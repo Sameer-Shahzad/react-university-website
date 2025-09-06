@@ -1,9 +1,25 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import logo from '../../assets/logo.png'
+import './Navbar.css'
 
 const Navbar = () => {
+
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 720) {
+        setSticky(true);
+      } else if (window.scrollY < 720) {
+        setSticky(false);
+      } else {
+        setSticky(false);
+      }
+    })
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 flex items-center justify-between px-8 py-4 text-white">
+    <nav className={`${sticky? 'nav1' : ''} fixed top-0 left-0 right-0 flex items-center justify-between px-8 py-3 text-white z-50`}>
       <div className="flex items-center gap-2">
         <img src={logo} alt="Logo" className="h-8 w-auto" />
       </div>

@@ -4,7 +4,7 @@ import play_icon from '../../assets/play-icon.png'
 
 const About = () => {
     return (
-        <div className="flex flex-col md:flex-row items-center justify-between mx-auto my-20 p-5 w-full max-w-5xl">
+        <div className="flex flex-col md:flex-row items-center justify-between mx-auto mt-20 p-5 w-full max-w-5xl">
             <div className=" w-full md:w-2/5 flex justify-center items-center mb-10 md:mb-0 group relative">
                 <img src={about_img} alt="Students" className=" w-full rounded-lg shadow-lg "/>
                 <div className="absolute inset-0 bg-gray-700 opacity-0 group-hover:opacity-10 transition duration-300"></div>
