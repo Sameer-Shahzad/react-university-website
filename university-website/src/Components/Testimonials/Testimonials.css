@@ -1,0 +1,26 @@
+.extendingWidth {
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.forMargin {
+    margin: 90px;
+    
+}
+
+li {
+    list-style: none; 
+}
+
+.studentCard {
+    height: 340px;
+    width: 615px;
+}
+
+.againForMargin {
+    margin-top: 150px;
+    margin-left: -60px;
+    margin-right: -60px;
+}
