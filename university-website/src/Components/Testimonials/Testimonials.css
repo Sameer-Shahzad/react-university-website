@@ -1,13 +1,14 @@
 .extendingWidth {
-    width: 200%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 20px;
+    padding-left: 5px;
+    overflow-x: hidden;
 }
 
 .forMargin {
     margin: 90px;
-    
 }
 
 li {
@@ -24,3 +25,5 @@ li {
     margin-left: -60px;
     margin-right: -60px;
 }
+
+
