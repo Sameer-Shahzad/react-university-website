@@ -9,7 +9,7 @@ import programIcon3 from '../../assets/program-icon-3.png'
 
 const Programs = () => {
   return (
-    <div className="flex gap-6 mt-20 justify-center mb-10 flex-wrap">
+    <div className="flex gap-6 mt-20 justify-center mb-10 flex-wrap" id="programs">
 
         <div className="relative w-128 h-80 rounded-lg overflow-hidden group">
             <img className="w-full h-full object-cover rounded-lg" src={program1} alt="" />

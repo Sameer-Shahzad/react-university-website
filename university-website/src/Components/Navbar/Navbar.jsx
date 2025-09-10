@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import logo from '../../assets/logo.png'
 import './Navbar.css'
+import { Link } from 'react-scroll';
+
 
 const Navbar = () => {
 
@@ -23,16 +25,12 @@ const Navbar = () => {
       </div>
 
       <ul className="flex items-center gap-10 font-medium text-sm">
-        <li className="hover:text-gray-300 cursor-pointer">Home</li>
-        <li className="hover:text-gray-300 cursor-pointer">Program</li>
-        <li className="hover:text-gray-300 cursor-pointer">About us</li>
-        <li className="hover:text-gray-300 cursor-pointer">Campus</li>
-        <li className="hover:text-gray-300 cursor-pointer">Testimonials</li>
-        <li>
-          <button className="bg-white text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-gray-200 transition">
-            Contact us
-          </button>
-        </li>
+        <li className="hover:text-gray-300 cursor-pointer"><Link to="hero" smooth={true} offset={0} duration={500}>Home</Link></li>
+        <li className="hover:text-gray-300 cursor-pointer"><Link to="programs" smooth={true} offset={-260} duration={500}>Program</Link></li>
+        <li className="hover:text-gray-300 cursor-pointer"><Link to="about" smooth={true} offset={-150} duration={500} >About us</Link></li>
+        <li className="hover:text-gray-300 cursor-pointer"><Link to="campus" smooth={true} offset={-260} duration={500} >Campus</Link></li>
+        <li className="hover:text-gray-300 cursor-pointer"><Link to="testimonials" smooth={true} offset={-260} duration={500}>Testimonials</Link></li>
+        <li> <Link to="contact" smooth={true} offset={0} duration={500} className="bg-white text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-gray-200 transition">Contact us</Link></li>
       </ul>
     </nav>
   )

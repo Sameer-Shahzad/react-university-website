@@ -7,7 +7,7 @@ import whiteArrow from '../../assets/white-arrow.png'
 
 const Campus = () => {
   return (
-   <div className="flex flex-col items-center mt-20">
+   <div className="flex flex-col items-center mt-20" id="campus">
 
         <div className="flex flex-row gap-6 flex-wrap justify-center">
 

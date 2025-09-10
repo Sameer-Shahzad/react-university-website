@@ -4,8 +4,35 @@ import mail_icon from '../../assets/mail-icon.png'
 import phone_icon from '../../assets/phone-icon.png'
 import location_icon from '../../assets/location-icon.png'
 import white_arrow from '../../assets/white-arrow.png'
+import './Contact.css'
 
 const Contacts = () => {
+
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "0b09f666-2b01-4293-8b53-751178cc136e");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  }
+
   return (
      <div className='contact mt-20 justify-center flex gap-40'>
       <div className='contact-col'>
@@ -18,7 +45,7 @@ const Contacts = () => {
         </ul>
       </div>
       <div className='contact-col'>
-        <form className="flex flex-col">
+        <form onSubmit={onSubmit} className="flex flex-col">
           <label className="text-md" for="name">Your Name</label>
           <input className="bg-blue-100 h-12 w-96 rounded-md pl-3 border border-gray-300 focus:outline-none focus:border-blue-800" type="text" id="name" name="name" placeholder="Enter your name" required />
 
@@ -32,7 +59,7 @@ const Contacts = () => {
 
         </form>
 
-        <span>sending</span>
+        <span>{result}</span>
 
       </div>
     </div>
