@@ -32,7 +32,7 @@ const Contacts = () => {
 
         </form>
 
-        {/* <span>sending</span> */}
+        <span>sending</span>
 
       </div>
     </div>
