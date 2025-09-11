@@ -1,3 +1,35 @@
 .nav1 {
     background-color: rgb(50, 103, 121);
 }
+
+.menuicon{
+    display: none;
+}
+
+@media (max-width: 1004px) {
+    nav {
+       padding: 15px 0;
+    }
+    nav ul {
+        position: fixed;
+        top: 0;
+        background-color: rgb(38, 37, 37);
+        z-index: -999;
+        right: 0;
+        width: 200px;
+        padding-top: 70px;
+        transition: 0.5s;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .menuicon{
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        padding-bottom: 5px;
+    }
+    .forMobile{
+        right: -200px;
+    }
+}

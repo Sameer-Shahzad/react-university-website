@@ -5,8 +5,8 @@ import './Testimonials.css'
 
 const Testimonials = () => {
   return (
-    <div className="relative forMargin overflow-visible" id="testimonials">
-      <ul className="flex extendingWidth relative z-10 flex flex-wrap sm:justify-center">
+    <div className=" forMargin overflow-visible" id="testimonials">
+      <ul className="flex extendingWidth flex flex-wrap sm:justify-center">
         <li>
           <div className="bg-white p-3 rounded-md shadow-lg hover:shadow-2xl transition-shadow studentCard">
             <img

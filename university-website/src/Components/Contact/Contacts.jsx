@@ -34,7 +34,7 @@ const Contacts = () => {
   }
 
   return (
-     <div className='contact mt-20 justify-center flex gap-40'>
+     <div className="contact mt-20 justify-center md:flex md:flex-row gap-40 sm:flex-col sm:flex sm:jutify-center sm:items-center">
       <div className='contact-col'>
         <h3 className="flex font-medium text-3xl gap-3">Send us a message <img className="h-8 w-7" src={msg_icon} alt="" /></h3>
         <p className="w-96 text-justify leading-relaxed">Feel free to reach out through contact form or find our contactinformation below. Your feedback, questions, and suggestions are important to us as we strive to provide exceptional service to our university community.</p>
@@ -44,7 +44,7 @@ const Contacts = () => {
           <li className="flex gap-3 pt-4 pb-5"><img className="h-8 w-7" src={location_icon} alt="" />D-Block , Model Town<br/> Lahore, Pakistan</li>
         </ul>
       </div>
-      <div className='contact-col'>
+      <div className='contact-col sm:-mt-20'>
         <form onSubmit={onSubmit} className="flex flex-col">
           <label className="text-md" for="name">Your Name</label>
           <input className="bg-blue-100 h-12 w-96 rounded-md pl-3 border border-gray-300 focus:outline-none focus:border-blue-800" type="text" id="name" name="name" placeholder="Enter your name" required />
@@ -60,7 +60,6 @@ const Contacts = () => {
         </form>
 
         <span>{result}</span>
-
       </div>
     </div>
   )
